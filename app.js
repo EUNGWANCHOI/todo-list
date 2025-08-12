@@ -1,5 +1,5 @@
 let addBtn = document.getElementById("addTodo");
-let inputBox = document.getElementById("inputField");
+let inputBox = document.getElementById("inputBox");
 let todoList = document.getElementById("todos");
 
 const createTodo = (content) => {
