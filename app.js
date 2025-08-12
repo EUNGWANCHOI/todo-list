@@ -20,3 +20,16 @@ const createTodo = (content) => {
 
   return todo;
 };
+
+const addTodo = () => {
+  const value = inputBox.value.trim();
+  if (value !== "") {
+    const todoItem = createTodo(value);
+    todoList.appendChild(todoItem);
+    inputBox.value = "";
+    return;
+  }
+  alert("할 일을 입력해주세요");
+};
+
+addBtn.addEventListener("click", addTodo);
