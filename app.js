@@ -1,7 +1,9 @@
+// HTMl 태그들 JS에 인식시키기
 let addBtn = document.getElementById("addTodo");
 let inputBox = document.getElementById("inputBox");
 let todoList = document.getElementById("todos");
 
+// 할 일 생성 함수(화살표)
 const createTodo = (content) => {
   const todo = document.createElement("div");
   const checkBox = document.createElement("input");
@@ -21,6 +23,7 @@ const createTodo = (content) => {
   return todo;
 };
 
+// 할 일 추가 함수(화살표)
 const addTodo = () => {
   const value = inputBox.value.trim();
   if (value !== "") {
@@ -32,4 +35,5 @@ const addTodo = () => {
   alert("할 일을 입력해주세요");
 };
 
+// 버튼 클릭 시 할 일 추가
 addBtn.addEventListener("click", addTodo);
