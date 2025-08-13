@@ -35,5 +35,5 @@ const addTodo = () => {
   alert("할 일을 입력해주세요");
 };
 
-// 버튼 클릭 시 할 일 추가
+// 버튼 클릭 시 할 일 추가(이벤트리스너)
 addBtn.addEventListener("click", addTodo);
