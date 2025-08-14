@@ -6,6 +6,7 @@ let todoList = document.getElementById("todos");
 // 할 일 생성 함수(화살표)
 const createTodo = (content) => {
   const todo = document.createElement("div");
+  todo.classList.add("todo-item"); // css에서 쓸 클래스 추가
   const checkBox = document.createElement("input");
   checkBox.type = "checkbox";
 
@@ -15,7 +16,7 @@ const createTodo = (content) => {
   const delBtn = document.createElement("button");
   delBtn.textContent = "X";
   delBtn.addEventListener("click", () => todo.remove());
-
+  ㅌ;
   todo.appendChild(checkBox);
   todo.appendChild(text);
   todo.appendChild(delBtn);
