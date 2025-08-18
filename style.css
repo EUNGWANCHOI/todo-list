@@ -65,20 +65,34 @@ body {
 .todo-item {
   display: flex;
   align-items: center;
-  background: #fafafa;
-  padding: 10px;
-  margin-top: 10px;
-  border-radius: 8px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
-  transition: 0.2s;
+  gap: 10px;
+  background: #f9f9f9;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-top: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.todo-item:hover {
-  background: #f0f0f0;
-}
-
-/* 체크박스 */
 .todo-item input[type="checkbox"] {
   margin-right: 10px;
   accent-color: #6c63ff;
+}
+
+.todo-item.completed span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.todo-item button {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: #ff5c5c;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.todo-item button :hover {
+  color: #ff1f1f;
 }

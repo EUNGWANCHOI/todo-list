@@ -6,8 +6,15 @@ let todoList = document.getElementById("todos");
 // 할 일 생성 함수(화살표)
 const createTodo = (content) => {
   const todo = document.createElement("div");
+  todo.classList.add("todo-item"); // ← CSS에서 쓸 클래스 추가
+
   const checkBox = document.createElement("input");
   checkBox.type = "checkbox";
+
+  //체크박스 클릭 시 할 일 완료 표시
+  checkBox.addEventListener("change", () => {
+    todo.classList.toggle("completed", checkBox.checked);
+  });
 
   const text = document.createElement("span");
   text.textContent = content;
@@ -15,11 +22,10 @@ const createTodo = (content) => {
   const delBtn = document.createElement("button");
   delBtn.textContent = "X";
   delBtn.addEventListener("click", () => todo.remove());
+
   todo.appendChild(checkBox);
   todo.appendChild(text);
   todo.appendChild(delBtn);
-
-  todo.classList.add("todo-item"); // css에서 쓸 클래스 추가
 
   return todo;
 };
